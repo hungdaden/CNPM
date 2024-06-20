@@ -211,6 +211,7 @@ table td {
 }
 
 </style>
+
 <body>
     <div class="sidebar">
         <div class="profile">
@@ -232,112 +233,58 @@ table td {
             <input type="text" placeholder="Nhập từ khóa tìm kiếm">
             <div class="buttons">
                 <button class="search-button">Tìm kiếm</button>
+                <button class="add-button">Thêm mới</button>
                 <button class="export-button">Sửa thông tin</button>
                 <button class="import-button">Xóa thông tin</button>
+                <button class="report-button">Báo cáo</button>
             </div>
         </div>
         <div class="form-container">
             
-            <h2 >SỬA CHỮA </h2>
+            <h2 >Báo cáo</h2>
             <form> 
                 <div class="form-group">
-                    <label for="ma-tai-san">Mã tài sản</label>
-                    <input type="text" id="ma-tai-san" name="ma-tai-san">
+                    <label for="nguoigui">Người gửi</label>
+                    <input type="text" id="nguoigui" name="nguoigui" >
                 </div>
                 <div class="form-group">
-                    <label for="ten-tai-san">Tên tài sản</label>
-                    <input type="text" id="ten-tai-san" name="ten-tai-san">
+                    <label for="matailieu">Mã tài liệu</label>
+                    <input type="text" id="matailieu" name="matailieu" >
                 </div>
                 <div class="form-group">
-                    <label for="nha-cung-cap">Nhà cung cấp</label>
-                    <input type="text" id="nha-cung-cap" name="nha-cung-cap">
+                    <label for="tentailieu">Tên tài liệu</label>
+                    <input type="number" id="tentailieu" name="tentailieu" >
                 </div>
                 <div class="form-group">
-                    <label for="serial-number">Số điện thoại</label>
-                    <input type="text" id="serial-number" name="serial-number">
-                </div>
+                    <label for="loaitailieu">Loại tài liệu</label>
+                    <input type="text" id="loaitailieu" name="loaitailieu" >
+                </div> 
                 <div class="form-group">
-                    <label for="trang-thai">Trạng thái</label>
-                    <input type="text" id="trang-thai" name="trang-thai">
-              
+                    <label for="ngaysua">Ngày gửi</label>
+                    <input type="date" id="ngayThanhLy" name="ngayThanhLy" >
                 </div>
-                <div class="form-group">
-                    <label for="ngay-mua">Ngày mua</label>
-                    <input type="date" id="ngay-mua" name="ngay-mua">
-                </div>
-                <div class="form-group">
-                    <label for="ngay-het-bao-hanh">Ngày hết bảo hành</label>
-                    <input type="date" id="ngay-het-bao-hanh" name="ngay-het-bao-hanh">
-                </div>               
-            <div class="form-group full-width">
-                <label for="mo-ta">Mô tả</label>
-                <textarea id="mo-ta"></textarea>
-            </div>
-                <button type="submit" class="update-button">Xác nhận</button>
+                <button type="submit" class="update-button">Thêm mới</button>
             </form>
         </div>
         <div class="table-container">
-            <h2>Sửa Chữa</h2>
+            <h2>Danh sách báo cáo</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Mã tài sản</th>
-                        <th>Tên tài sản</th>
-                        <th>Nhà cung cấp</th>
-                        <th>Số điện thoại</th>
-                        <th>Trạng thái</th>
-                        <th>Ngày mua</th>
-                        <th>Ngày hết bảo hành</th>
-                        <th>Mô tả</th>
-
+                        <th>Mã tài liệu</th>
+                        <th>Tên tài loại</th>
+                        <th>Loại tài liệu</th>
+                        <th>Người gửi</th>
+                        <th>Ngày gửi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>MC001</td>
-                        <td>Máy chiếu</td>
-                        <td>Thỏ bảy màu</td>
-                        <td>0988166254</td>
-                        <td>Đã bị hỏng</td>
-                        <td>16/5/2021</td>
-                        <td>16/5/2025</td>
-                        <td>    </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>MC002</td>
-                        <td>Máy chiếu</td>
-                        <td>Thỏ bảy màu</td>
-                        <td>0988166254</td>
-                        <td>Đã bị hỏng</td>
-                        <td>16/5/2023</td>
-                        <td>16/5/2028</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>BN001</td>
-                        <td>Bàn dài</td>
-                        <td>HUNGDADEN</td>
-                        <td>0967888159</td>
-                        <td>Đã bị hỏng</td>
-                        <td>16/5/2023</td>
-                        <td>16/5/2025</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>BD001</td>
-                        <td>BÓNG ĐÈN</td>
-                        <td>Công ty cung cấp bóng đèn </td>
-                        <td>0922366451</td>
-                        <td>Đã bị hỏng</td>
-                        <td>16/5/2020</td>
-                        <td>16/5/2025</td>
-                        <td>    </td>
+                        <td>BCT6</td>
+                        <td>Báo cáo T6</td>
+                        <td>word</td>
+                        <td>Hung</td>
+                        <td>20/06/2024</td>
                     </tr>
                 </tbody>
             </table>
