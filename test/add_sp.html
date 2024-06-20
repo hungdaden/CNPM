@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Quản Lý Tài Sản</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar .profile {
+            text-align: center;
+        }
+
+        .sidebar .profile img {
+            border-radius: 50%;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .content h1 {
+            margin-top: 0;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions i {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .form-container form .form-group {
+            flex: 1 1 50%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .form-container form .form-group.full-width {
+            flex: 1 1 100%;
+        }
+
+        .form-container form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container form input, 
+        .form-container form textarea, 
+        .form-container form select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container form button {
+            padding: 10px 20px;
+            margin: 10px 10px 0 0;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://via.placeholder.com/50" alt="Profile Picture">
+            <h3>admin</h3>
+            <p>Online</p>
+        </div>
+        <ul>
+            <li><i class="fas fa-home"></i> Trang chủ</li>
+            <li><i class="fas fa-list"></i> Danh mục tài sản</li>
+            <li><i class="fas fa-info-circle"></i> Chi tiết tài sản</li>
+            <li><i class="fas fa-tools"></i> Sửa chữa</li>
+            <li><i class="fas fa-file-alt"></i> Phiếu bàn giao</li>
+            <li><i class="fas fa-file-contract"></i> Hợp đồng</li>
+            <li><i class="fas fa-building"></i> Văn phòng</li>
+            <li><i class="fas fa-truck"></i> Nhà cung cấp</li>
+            <li><i class="fas fa-trash-alt"></i> Thanh lý</li>
+            <li><i class="fas fa-map-marker-alt"></i> Khu vực</li>
+            <li><i class="fas fa-cogs"></i> Hệ thống</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Thêm mới</h1>
+        <form class="asset-form">            
+        </form>
+        <div class="form-container">
+            <form>
+                    <div class="form-group">
+                        <label for="ma-tai-san">Mã tài sản</label>
+                        <input type="text" id="ma-tai-san" name="ma-tai-san">
+                    </div>
+                    <div class="form-group">
+                        <label for="ten-tai-san">Tên tài sản</label>
+                        <input type="text" id="ten-tai-san" name="ten-tai-san">
+                    </div>
+                    <div class="form-group">
+                        <label for="phan-loai">Phân loại</label>
+                        <select id="phan-loai" name="phan-loai">
+                            <option value="">Chọn</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nha-cung-cap">Nhà cung cấp</label>
+                        <input type="text" id="nha-cung-cap" name="nha-cung-cap">
+                    </div>
+                    <div class="form-group">
+                        <label for="serial-number">Serial number</label>
+                        <input type="text" id="serial-number" name="serial-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="trang-thai">Trạng thái</label>
+                        <select id="trang-thai" name="trang-thai">
+                            <option value="">Chọn</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ngay-mua">Ngày mua</label>
+                        <input type="date" id="ngay-mua" name="ngay-mua">
+                    </div>
+                    <div class="form-group">
+                        <label for="ngay-het-bao-hanh">Ngày hết bảo hành</label>
+                        <input type="date" id="ngay-het-bao-hanh" name="ngay-het-bao-hanh">
+                    </div>               
+                    <div class="form-group">
+                        <label for="ngay-thanh-ly">Ngày thanh lý</label>
+                        <input type="date" id="ngay-thanh-ly" name="ngay-thanh-ly">
+                    </div>
+                    <div class="form-group">
+                        <label for="gia-tri-ban-dau">Giá trị ban đầu</label>
+                        <input type="text" id="gia-tri-ban-dau" name="gia-tri-ban-dau">
+                    </div>
+                    <div class="form-group">
+                        <label for="ty-le-khau-hao-hang-nam">Tỷ lệ khấu hao hàng năm</label>
+                        <input type="text" id="ty-le-khau-hao-hang-nam" name="ty-le-khau-hao-hang-nam">
+                    </div>
+                    <div class="form-group">
+                        <label for="gia-tri-khau-hao">Giá trị khấu hao</label>
+                        <input type="text" id="gia-tri-khau-hao" name="gia-tri-khau-hao">
+                    </div>
+                    <div class="form-group">
+                        <label for="gia-tri-con-lai">Giá trị còn lại</label>
+                        <input type="text" id="gia-tri-con-lai" name="gia-tri-con-lai">
+                    </div>
+                    <div class="form-group">
+                        <label for="phong-can-theo-doi">Phòng cần theo dõi <span class="required">*</span></label>
+                        <input type="text" id="phong-can-theo-doi" name="phong-can-theo-doi">
+                    </div>
+                    <div class="form-group">
+                        <label for="tong-chi-phi-bao-duong">Tổng chi phí bảo dưỡng</label>
+                        <input type="text" id="tong-chi-phi-bao-duong" name="tong-chi-phi-bao-duong">
+                    </div>
+                    <div class="form-group">
+                        <label for="tong-chi-phi-sua-chua">Tổng chi phí sửa chữa</label>
+                        <input type="text" id="tong-chi-phi-sua-chua" name="tong-chi-phi-sua-chua">
+                    </div>
+                <div class="form-group">
+                    <label for="ngay-thanh-ly">Ngày thanh lý</label>
+                    <input type="date" id="ngay-thanh-ly">
+                </div>
+                <div class="form-group">
+                    <label for="gia-tri-ban-dau">Giá trị ban đầu</label>
+                    <input type="text" id="gia-tri-ban-dau" value="10,000,000">
+                </div>
+                <div class="form-group">
+                    <label for="ty-le-khau-hao">Tỷ lệ khấu hao hàng năm</label>
+                    <input type="number" id="ty-le-khau-hao" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="gia-tri-khau-hao">Giá trị khấu hao</label>
+                    <input type="text" id="gia-tri-khau-hao">
+                </div>
+                <div class="form-group">
+                    <label for="gia-tri-con-lai">Giá trị còn lại</label>
+                    <input type="text" id="gia-tri-con-lai">
+                </div>
+                <div class="form-group full-width">
+                    <label for="phong-can-theo-doi">Phòng cần theo dõi *</label>
+                    <input type="text" id="phong-can-theo-doi" placeholder="tài sản thuộc phòng ban abc...">
+                </div>
+                <div class="form-group">
+                    <label for="tong-chi-phi-bao-duong">Tổng chi phí bảo dưỡng</label>
+                    <input type="text" id="tong-chi-phi-bao-duong">
+                </div>
+                <div class="form-group">
+                    <label for="tong-chi-phi-sua-chua">Tổng chi phí sửa chữa</label>
+                    <input type="text" id="tong-chi-phi-sua-chua">
+                </div>
+                <div class="form-group full-width">
+                    <label for="mo-ta">Mô tả</label>
+                    <textarea id="mo-ta"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ngay-bao-hanh-tiep-theo">Ngày bảo hành tiếp theo</label>
+                    <input type="date" id="ngay-bao-hanh-tiep-theo">
+                </div>
+                <div class="form-group">
+                    <label for="Owner">Owner</label>
+                    <input type="text" id="Owner">
+                </div>
+                <div class="form-group">
+                    <label for="quyen-xem">Quyền xem</label>
+                    <input type="text" id="quyen-xem">
+                </div>
+                <div class="form-group">
+                    <label for="quyen-sua">Quyền sửa</label>
+                    <input type="text" id="quyen-sua">
+                </div>
+                <div class="btn-addsp">
+                    <Button>Thêm mới</Button>
+                </div>
+
