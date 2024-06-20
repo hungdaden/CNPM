@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết hợp đồng</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.sidebar .profile p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #34495e;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.add-button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.export-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.import-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.options-button {
+    background-color: #e67e22;
+    color: white;
+}
+
+.manage-button {
+    background-color: #d35400;
+    color: white;
+}
+
+.report-button {
+    background-color: #16a085;
+    color: white;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 20%;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 75%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.update-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+.table-container h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.action-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-button.view {
+    background-color: #3498db;
+    color: white;
+}
+
+.action-button.edit {
+    background-color: #e67e22;
+    color: white;
+}
+
+</style>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="img/user.png" alt="Profile Picture">
+            <h3>Tên người dùng</h3>
+            <p>Online</p>
+        </div>
+        <ul>
+            <li><i class="fas fa-list"></i> Danh sách tài sản</li>
+            <li><i class="fa fa-object-group"></i> Phân loại</li>
+            <li><i class="fa fa-shopping-cart"></i> Mua Thiết Bị</li>
+            <li><i class="fa fa-wrench"></i> Sửa chữa</li>
+            <li><i class="fas fa-file-contract"></i> Thanh Lí</li>
+            <li><i class="fas fa-building"></i> Báo Cáo Định Kỳ</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="search-container">
+            <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <div class="buttons">
+                <button class="search-button">Tìm kiếm</button>
+                <button class="add-button">Thêm mới</button>
+                <button class="export-button">Sửa thông tin</button>
+                <button class="import-button">Xóa thông tin</button>
+                <button class="report-button">Báo cáo</button>
+            </div>
+        </div>
+        <div class="form-container">
+            
+            <h2 >SỬA CHỮA </h2>
+            <form> 
+                <div class="form-group">
+                    <label for="ma-tai-san">Mã tài sản</label>
+                    <input type="text" id="ma-tai-san" name="ma-tai-san">
+                </div>
+                <div class="form-group">
+                    <label for="ten-tai-san">Tên tài sản</label>
+                    <input type="text" id="ten-tai-san" name="ten-tai-san">
+                </div>
+                <div class="form-group">
+                    <label for="nha-cung-cap">Nhà cung cấp</label>
+                    <input type="text" id="nha-cung-cap" name="nha-cung-cap">
+                </div>
+                <div class="form-group">
+                    <label for="serial-number">Số điện thoại</label>
+                    <input type="text" id="serial-number" name="serial-number">
+                </div>
+                <div class="form-group">
+                    <label for="trang-thai">Trạng thái</label>
+                    <input type="text" id="trang-thai" name="trang-thai">
+              
+                </div>
+                <div class="form-group">
+                    <label for="ngay-mua">Ngày mua</label>
+                    <input type="date" id="ngay-mua" name="ngay-mua">
+                </div>
+                <div class="form-group">
+                    <label for="ngay-het-bao-hanh">Ngày hết bảo hành</label>
+                    <input type="date" id="ngay-het-bao-hanh" name="ngay-het-bao-hanh">
+                </div>               
+            <div class="form-group full-width">
+                <label for="mo-ta">Mô tả</label>
+                <textarea id="mo-ta"></textarea>
+            </div>
+                <button type="submit" class="update-button">Thêm mới</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Sửa Chữa</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã tài sản</th>
+                        <th>Tên tài sản</th>
+                        <th>Nhà cung cấp</th>
+                        <th>Số điện thoại</th>
+                        <th>Trạng thái</th>
+                        <th>Ngày mua</th>
+                        <th>Ngày hết bảo hành</th>
+                        <th>Mô tả</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MC001</td>
+                        <td>Máy chiếu</td>
+                        <td>Thỏ bảy màu</td>
+                        <td>0988166254</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2021</td>
+                        <td>16/5/2025</td>
+                        <td>    </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>MC002</td>
+                        <td>Máy chiếu</td>
+                        <td>Thỏ bảy màu</td>
+                        <td>0988166254</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2023</td>
+                        <td>16/5/2028</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>BN001</td>
+                        <td>Bàn dài</td>
+                        <td>HUNGDADEN</td>
+                        <td>0967888159</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2023</td>
+                        <td>16/5/2025</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>BD001</td>
+                        <td>BÓNG ĐÈN</td>
+                        <td>Công ty cung cấp bóng đèn </td>
+                        <td>0922366451</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2020</td>
+                        <td>16/5/2025</td>
+                        <td>    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
