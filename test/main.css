@@ -3,6 +3,8 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url(img/anhtruong1.jpg);
+    background-position: -300px 800px;
 }
 
 .sidebar {
@@ -156,3 +158,27 @@ body {
     color: white;
 }
 
+#mainpage{
+    font-size: 80px;
+    padding-left: 8rem;
+    background-color: white;
+    border-radius: 50px;
+    border: 10px;
+}
+
+#login{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: .8rem 1rem;
+}
+#login:hover{
+    background-color: white;
+    letter-spacing: .1rem;
+    color: black;
+    transform: scale(1.05);
+    font-weight: bolder;
+}
