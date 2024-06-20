@@ -127,6 +127,7 @@ form .field input[type="submit"] {
     cursor      : pointer;
     background  : linear-gradient(-135deg, #5BA8A0, #CBE5AE);
     transition  : all 0.3s ease;
+    
 }
 
 form .field input[type="submit"]:active {
