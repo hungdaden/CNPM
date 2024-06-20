@@ -22,7 +22,7 @@ body {
 
 .wrapper {
     width        : 380px;
-    background   : #fff;
+    background   :  white;
     border-radius: 15px;
     box-shadow   : 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
@@ -35,7 +35,7 @@ body {
     color        : #fff;
     user-select  : none;
     border-radius: 15px 15px 0 0;
-    background   : linear-gradient(-135deg, #5BA8A0, #CBE5AE);
+    background   : linear-gradient(-135deg, black, white);
 }
 
 .wrapper form {
@@ -125,7 +125,7 @@ form .field input[type="submit"] {
     font-size   : 15px;
     font-weight : 500;
     cursor      : pointer;
-    background  : linear-gradient(-135deg, #5BA8A0, #CBE5AE);
+    background  : linear-gradient(-135deg, black, white);
     transition  : all 0.3s ease;
     
 }

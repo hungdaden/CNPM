@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Tài Sản</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="addsp.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="img/user.png" alt="Profile Picture">
+            <h3>Tên Người Dùng</h3>
+            <p>Online</p>
+        </div>
+        <ul>
+            <li><i class="fas fa-list"></i><a class="btn" href="danhsach.html">Danh sách tài sản</a></li>
+            <li><i class="fa fa-object-group"></i><a class="btn" href="phanloai.html">Phân loại</a></li>
+            <li><i class="fa fa-shopping-cart"></i><a class="btn" href="mua.html">Mua Thiết Bị</a></li>
+            <li><i class="fa fa-wrench"></i><a class="btn" href="sua.html">Sửa chữa</a></li>
+            <li><i class="fas fa-file-contract"></i><a class="btn" href="thanhly.html">Thanh Lý</a></li>
+            <li><i class="fas fa-building"></i><a class="btn" href="baocao.html">Báo Cáo Định Kỳ</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="search-container">
+            <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <div style="margin: 10px;" class="buttons">
+                <button class="search-button">Tìm kiếm</button>
+                <button class="add-button">Thêm</button>
+                <button class="export-button">Sửa</button>
+                <button class="import-button">Xóa</button>
+                <button class="options-button">Báo Cáo</button>
+            </div>
+        </div>
+        <form> 
+            <div class="form-group">
+                <label for="MaTS">Mã tài sản</label>
+                <input type="text" id="MaTS">
+            </div>
+            <div class="form-group">
+                <label for="TenTS">Tên tài sản</label>
+                <input type="text" id="TenTS">
+            </div>
+            <div class="form-group">
+                <label for="So_luong">Số lượng</label>
+                <input type="number" id="So_luong">
+            </div>
+            <div class="form-group">
+                <label for="Phan_loai">Phân loại</label>
+                <input type="text" id="Phan_loai">
+            </div>
+            <div class="form-group">
+                <label for="Trang_thai">Trạng thái</label>
+                <input type="text" id="Trang_thai">
+            </div> 
+            <div class="form-group">
+                <label for="Ngay_mua">Ngày mua</label>
+                <input type="date" id="Ngay_mua">
+            </div>
+            <div class="form-group">
+                <label for="">Hạn bảo hành</label>
+                <input type="date" id="Han_bh">
+            </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã tài sản</th>
+                        <th>Tên tài sản</th>
+                        <th>Số lượng</th>
+                        <th>Phân loại</th>
+                        <th>Trạng thái</th>
+                        <th>Ngày mua</th>
+                        <th>Hạn bảo hành</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PC0002</td>
+                        <td>Máy tính để bàn</td>
+                        <td>02</td>
+                        <td>Tin Học</td>
+                        <td>Tốt</td>
+                        <td>19-06-2024</td>
+                        <td>19-06-2025</td>
+                    </tr>
+                    <tr>
+                        <td>PC0001</td>
+                        <td>Máy tính xách tay</td>
+                        <td>01</td>
+                        <td>Hóa Học</td>
+                        <td>Tốt</td>
+                        <td>14-06-2024</td>
+                        <td>14-06-2025</td>
+                    </tr>
+                    <tr>
+                        <td>PC0023</td>
+                        <td>Kính hiển vỉ</td>
+                        <td>01</td>
+                        <td>Sinh Học</td>
+                        <td>Tốt</td>
+                        <td>15-06-2024</td>
+                        <td>15-06-2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
